@@ -1,0 +1,272 @@
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #222;
+
+    background: linear-gradient(to bottom,
+            #dbe8ee 0%,
+            #eef3f6 50%,
+            #ffffff 100%);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: min(1000px, 92%);
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+    background: linear-gradient(135deg, #141e30, #243b55, #4e73df);
+    color: #fff;
+    padding: 16px 0;
+}
+
+.container_cabecera {
+    text-align: center;
+}
+
+.titulo {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+/* Nav */
+.barra_navegacion {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.barra_nav {
+    background: #505176;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.barra_nav:hover {
+    background: linear-gradient(135deg, #2c4a6e, #5c85ff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Sections */
+.section {
+    padding: 16px 0;
+}
+
+.secciones {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+/*FOTOS ENCABEZADO*/
+
+.projects-row {
+    display: flex;
+}
+
+.projects-row img {
+    width: 100%;
+}
+
+/* Cards (experiencia) */
+.card {
+    background: linear-gradient(to bottom, #ffffff, #f4f8fa);
+    border: 1px solid #d9e3e8;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.card_titulo {
+    margin: 0 0 6px;
+}
+
+.card_info {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Lists */
+.list {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.muted {
+    margin: 8px 0;
+    color: #555;
+}
+
+/* Índice */
+.index__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.indice_link {
+    display: block;
+    background: linear-gradient(to bottom, #f8fbfd, #eaf2f6);
+    border: 1px solid #d9e3e8;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.indice_link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Perfil */
+.profile {
+    display: grid;
+    gap: 12px;
+    align-items: start;
+}
+
+.profile__img {
+    width: 180px;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+/* Educación */
+.formacion {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.formacion_titulo {
+    margin-bottom: 14px;
+}
+
+/* Tabla */
+.table-wrap {
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 420px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+
+/* Footer */
+.footer {
+    border-top: 1px solid #ddd;
+    padding: 16px 0;
+    text-align: center;
+    background: #fff;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 26px;
+    }
+
+    .section {
+        padding: 22px 0;
+    }
+
+    .profile {
+        grid-template-columns: 200px 1fr;
+        gap: 18px;
+    }
+
+    .index__list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /* Grid proyectos */
+    .section .container {
+        display: grid;
+        gap: 12px;
+    }
+
+    /* Hacemos que el título ocupe toda la fila */
+    .secciones {
+        grid-column: 1 / -1;
+    }
+
+    /* En pantallas más grandes: 2 columnas */
+    @media (min-width: 768px) {
+        .section .container {
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+        }
+    }
+
+    /* Formulario*/
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-family: inherit;
+    }
+
+    button {
+        padding: 8px 14px;
+        border: 1px solid #ccc;
+        background: #eee;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #ddd;
+    }
+
+    fieldset {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 12px;
+    }
+}

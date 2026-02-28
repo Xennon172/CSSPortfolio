@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio HTML · Contacto</title>
+  <meta name="description" content="Formulario de contacto accesible con validación HTML5.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container_cabecera">
+      <h1 class="titulo" id="inicio">LMSGI - Práctica Final - Currículum</h1>
+
+      <nav class="barra_navegacion">
+        <a class="barra_nav" href="index.html">Currículum</a>
+        <a class="barra_nav" href="porfolio.html">Porfolio</a>
+        <a class="barra_nav" href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" id="contenido">
+
+    <section class="section">
+      <div class="container">
+        <h2 class="secciones" id="form_contacto">Envíame un mensaje</h2>
+
+        <div class="card">
+          <img src="/LMSGI/PorfolioHTML/media/imagenes/formulario.gif" width="150" alt="Contacto"
+            title="Imagen de contacto" style="display:block;margin:0 auto 16px;">
+
+          <form action="formulario.php" method="post">
+
+            <fieldset>
+              <legend>Formulario de contacto</legend>
+
+              <p>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" placeholder="Evaristo" required>
+              </p>
+
+              <p>
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" placeholder="+34 603 012 034" pattern="^[+0-9\s-]{9,}$">
+              </p>
+
+              <p>
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" placeholder="evaristo@gmail.com" required>
+              </p>
+
+              <p>
+                <label for="comentarios">Escribe tu mensaje:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="6" placeholder="Escribe aquí tus comentarios..."
+                  required></textarea>
+              </p>
+
+              <p>
+                <label for="asunto">Asunto:</label><br>
+                <select id="asunto" name="asunto" required>
+                  <option value="" selected disabled>Elige una opción</option>
+                  <option>Oportunidad laboral</option>
+                  <option>Colaboración</option>
+                  <option>Consulta general</option>
+                  <option>Otro</option>
+                </select>
+              </p>
+
+              <p>
+                <input id="privacidad" name="privacidad" type="checkbox" required>
+                <label for="privacidad">He leído y acepto la política de privacidad</label>
+              </p>
+
+              <p>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+              </p>
+
+            </fieldset>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>&copy; 2025 Evaristo Mateo Poveda.</small>
+    </div>
+  </footer>
+
+</body>
+
+</html>
